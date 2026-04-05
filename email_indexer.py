@@ -6,7 +6,7 @@ import random
 from sample_emails import SAMPLE_EMAILS
 
 # Global Configuration
-MONGODB_URI = "mongodb://localhost:27017"
+MONGODB_URI = "mongodb+srv://gangeshathi_db_user:uFh2h42dIaYiVena@cluster0.jjygfov.mongodb.net/?appName=Cluster0"
 DB_NAME = "email_search_db"
 COLLECTION_NAME = "emails"
 
