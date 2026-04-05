@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Email Search | AI Driven</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Email Search</h1>
+            <p style="color: var(--text-muted); font-size: 1.1rem;">Search your inbox by <strong>meaning</strong>, not just keywords.</p>
+        </header>
+
+        <section class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="e.g., 'Where did we discuss the holiday party?'" autocomplete="off">
+                <button id="searchBtn" class="search-button">Search</button>
+            </div>
+        </section>
+
+        <main class="main-content">
+            <aside class="sidebar">
+                <div class="filter-group">
+                    <h3>Stats</h3>
+                    <div id="statsContent">
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Loading stats...</p>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Filter by Category</h3>
+                    <div id="categoryFilters">
+                        <!-- Categories will be loaded here -->
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <button id="ingestBtn" style="width: 100%; padding: 0.75rem; background: transparent; border: 1px solid var(--glass-border); color: var(--text-muted); border-radius: 0.75rem; cursor: pointer;">
+                        Re-index Emails
+                    </button>
+                </div>
+            </aside>
+
+            <section class="results-column">
+                <div id="resultsInfo" style="margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                    Showing recent emails
+                </div>
+                <div id="resultsList" class="results-list">
+                    <!-- Email cards will be loaded here -->
+                    <div style="text-align: center; padding: 3rem; color: var(--text-muted);">
+                        Fetching your inbox...
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Email Modal -->
+    <div id="emailModal" class="modal-overlay">
+        <div class="modal-content">
+            <span id="closeModal" class="close-modal">✕</span>
+            <div id="modalBody">
+                <!-- Content will be injected -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
